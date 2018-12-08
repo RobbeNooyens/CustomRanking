@@ -1,0 +1,22 @@
+# Set a message to 'none' to disable
+# Permissions:
+#   /progress: player.ranking.cmd.progress.self
+#   /progress <name>: player.ranking.cmd.progress.others
+#   Player can get reward: player.ranking.rank.<points>
+#     - use player.ranking.rank.* if every command should always be executed
+# For executing commands, you can use the %player% variable
+# Don't forget to uncomment lines 12, 14, 15, 18 and 20
+
+stages:
+  500:
+    cmds-to-execute:
+      - 'pex user %player% group set default'
+    messages-to-player:
+      - '&aYour new rank is: default'
+      - '&aYou have now 2 points!'
+#     - 'none'                  > to disable the message
+      
+your-points-message: '&aYou currently have %points% points!'
+other-points-message: '&a%player% has currently %points% points!'
+player-no-permission: '&cYou do not have enough permissions!'
+player-not-found: '&cPlayer %player% not found!'

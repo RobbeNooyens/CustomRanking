@@ -1,0 +1,11 @@
+name: CustomRanking
+version: 1.13.2.3
+description: Plugin for Shikishima
+author: robnoo02
+api-version: 1.13
+main: me.robnoo02.customranking.Main
+
+commands:
+  progress:
+    usage: /<command>
+    description: View points progress
