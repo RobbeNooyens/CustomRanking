@@ -8,9 +8,7 @@ public class PointsManager {
 	public static void checkStage(Player p) {
 		int points = CustomYmlManager.getPoints(p);
 		if (Main.plugin.getConfig().getConfigurationSection("stages").contains(String.valueOf(points))) {
-
 			if (p.hasPermission("player.ranking.rank." + String.valueOf(points))) {
-
 				for (String cmd : CustomYmlManager.getCommands(points)) {
 					if (!cmd.equalsIgnoreCase("none")) {
 						cmd = cmd.replaceAll("%player%", p.getName());
@@ -23,10 +21,8 @@ public class PointsManager {
 						p.sendMessage(TextManager.toColor(message));
 					}
 				}
-
 			}
 		}
-
 	}
 
 	public static void addPoint(Player p) {
